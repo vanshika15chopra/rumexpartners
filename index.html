@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rumex Partners</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container navbar">
+      <img src="images/logo.png" alt="Rumex Partners Logo" class="logo" />
+
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>We invest in who you are — not just what you’ve built</h1>
+      <p>We don’t just fund. We build scalable futures.</p>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="about" data-aos="fade-up">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        Rumex Partners is a privately held family office that invests proprietary capital across both listed and unlisted spaces.
+        We do not solicit public funds — instead, we deploy our own capital and expertise to build enduring value through
+        strategic partnerships and long-term growth investments.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services" class="services" data-aos="fade-up">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Investments</h3>
+          <p>Growth capital and operational partnership.</p>
+        </div>
+        <div class="card">
+          <h3>Fundraising</h3>
+          <p>Structuring and investor connections.</p>
+        </div>
+        <div class="card">
+          <h3>Consulting</h3>
+          <p>Governance, efficiency, and IPO readiness.</p>
+        </div>
+      </div>
+
+      <div class="details">
+        <p>
+          At Rumex, our approach goes beyond funding. We provide: <br /><br />
+          • <strong>Structured Capital:</strong> Tailored investment structures that support growth, acquisitions, and IPO readiness.<br />
+          • <strong>Strategic Advisory:</strong> Active engagement with promoters and management teams to strengthen governance, scalability, and financial discipline.<br />
+          • <strong>Fundraising Support:</strong> Guidance through capital planning, investor introductions, and deal structuring to ensure sustainable expansion.<br /><br />
+          Through this integrated approach, Rumex Partners acts as a strategic growth partner — combining capital, experience, and foresight
+          to help businesses unlock their full potential while maintaining long-term alignment and integrity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section id="portfolio" class="portfolio" data-aos="fade-up">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <p>Our investments include a diverse portfolio of listed and unlisted companies.</p>
+      <div class="logos">
+        <img src="images/logo1.png" alt="Company 1" />
+        <img src="images/logo2.png" alt="Company 2" />
+        <img src="images/logo3.png" alt="Company 3" />
+        <img src="images/logo4.png" alt="Company 4" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEDIA SECTION ===== -->
+  <section id="media" class="media" data-aos="fade-up">
+    <div class="container">
+      <h2>Media</h2>
+      <p>Coming soon — Insights, news, and publications from Rumex Partners.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:info@rumex.in">info@rumex.in</a></p>
+      <p>Address: Mumbai, India</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Rumex Partners | All Rights Reserved</p>
+  </footer>
+
+  <!-- ===== AOS + MOBILE MENU SCRIPT ===== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Mobile Menu Toggle
+    const menu = document.querySelector('#mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    menu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
