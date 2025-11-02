@@ -15,9 +15,16 @@
 body {
   background-color: var(--white);
   color: var(--navy);
-  line-height: 1.6;
+  line-height: 1.7;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ========== NAVBAR ========== */
@@ -27,7 +34,7 @@ header {
   width: 100%;
   background: rgba(11, 29, 64, 0.92);
   backdrop-filter: blur(6px);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
   z-index: 1000;
 }
 
@@ -35,13 +42,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 30px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  padding: 18px 25px;
 }
 
 .logo img {
@@ -49,17 +50,17 @@ header {
   width: auto;
 }
 
-/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 .nav-links a {
   color: var(--white);
   text-decoration: none;
   font-weight: 400;
+  letter-spacing: 0.5px;
   transition: color 0.3s;
 }
 
@@ -84,7 +85,7 @@ header {
   background-position: center;
   opacity: 0;
   transform: scale(1.05);
-  transition: opacity 1.5s ease-in-out, transform 3s ease-in-out;
+  transition: opacity 2s ease-in-out, transform 4s ease-in-out;
 }
 
 .hero-slide.active {
@@ -95,6 +96,7 @@ header {
 .hero1 {
   background-image: url('hero-bg.jpg');
 }
+
 .hero2 {
   background-image: url('hero-bg(2).jpg');
 }
@@ -103,7 +105,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(11, 29, 64, 0.35);
+  background: linear-gradient(to bottom, rgba(11,29,64,0.7), rgba(11,29,64,0.7));
   z-index: 2;
 }
 
@@ -119,20 +121,19 @@ header {
 
 .hero h1 {
   font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 14px;
+  font-weight: 500;
   letter-spacing: 1px;
+  margin-bottom: 16px;
 }
 
 .hero p {
   font-size: 1.2rem;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-/* ========== SECTION STYLES ========== */
+/* ========== SECTIONS ========== */
 .section {
-  padding: 100px 60px;
-  text-align: center;
+  padding: 120px 0;
 }
 
 .section.light {
@@ -147,79 +148,50 @@ header {
 
 .section h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
   font-weight: 600;
   text-transform: uppercase;
+  margin-bottom: 30px;
   letter-spacing: 1px;
 }
 
-/* ========== CLEAN PORTFOLIO SLIDER (like KSPL India) ========== */
-.portfolio-slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 60px 0;
-  background: #ffffff;
+.section p {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  opacity: 0.9;
+  line-height: 1.8;
 }
 
-.slider-track {
-  display: flex;
-  align-items: center;
-  width: calc(250px * 10);
-  animation: scrollSlide 50s linear infinite;
+/* ========== PORTFOLIO ========== */
+.swiper {
+  width: 85%;
+  margin: 50px auto 0;
 }
 
-.slide {
-  width: 220px;
-  flex-shrink: 0;
+.swiper-slide {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 40px;
 }
 
-.slide img {
+.swiper-slide img {
   width: 150px;
   height: auto;
-  opacity: 0.9;
+  opacity: 0.95;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,0.15));
   transition: transform 0.4s ease, opacity 0.3s ease;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
-.slide img:hover {
+.swiper-slide img:hover {
   transform: scale(1.08);
   opacity: 1;
 }
 
-@keyframes scrollSlide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Pause on hover (for desktop users) */
-.portfolio-slider:hover .slider-track {
-  animation-play-state: paused;
-}
-
-/* Responsive tweaks for slider */
-@media (max-width: 768px) {
-  .slide {
-    width: 160px;
-    padding: 10px 25px;
-  }
-  .slide img {
-    width: 110px;
-  }
-}
-
-@media (max-width: 480px) {
-  .slide {
-    width: 130px;
-    padding: 10px 15px;
-  }
-  .slide img {
-    width: 90px;
-  }
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--navy);
 }
 
 /* ========== FOOTER ========== */
@@ -227,7 +199,7 @@ footer {
   background: var(--navy);
   color: var(--white);
   text-align: center;
-  padding: 20px;
+  padding: 25px 10px;
   font-size: 0.9rem;
 }
 
@@ -235,18 +207,14 @@ footer {
 .hamburger {
   display: none;
   flex-direction: column;
-  justify-content: center;
   gap: 5px;
-  width: 25px;
-  height: 20px;
   cursor: pointer;
-  z-index: 1001;
 }
 
 .hamburger span {
   display: block;
   height: 3px;
-  width: 100%;
+  width: 25px;
   background-color: var(--white);
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -273,25 +241,17 @@ footer {
     top: 70px;
     right: 0;
     width: 100%;
-    background-color: rgba(11, 29, 64, 0.97);
+    background-color: rgba(11, 29, 64, 0.98);
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px 0;
+    gap: 25px;
+    padding: 30px 0;
     display: none;
-    transform: translateY(-20px);
-    opacity: 0;
     transition: all 0.4s ease;
   }
 
   .nav-links.active {
     display: flex;
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .logo img {
-    height: 40px;
   }
 
   .hero h1 {
@@ -300,9 +260,5 @@ footer {
 
   .hero p {
     font-size: 1rem;
-  }
-
-  .section {
-    padding: 70px 20px;
   }
 }
