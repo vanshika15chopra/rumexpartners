@@ -14,6 +14,7 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- Navbar -->
   <header>
@@ -44,13 +45,14 @@
     <div class="hero-slide hero1 active"></div>
     <div class="hero-slide hero2"></div>
     <div class="hero-overlay"></div>
+
     <div class="hero-content">
       <h1>We invest in who you are — not just what you’ve built</h1>
       <p>We don’t just fund. We build scalable futures.</p>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="section light">
     <h2>About Us</h2>
     <p>
@@ -59,17 +61,16 @@
     </p>
   </section>
 
-  <!-- Services -->
+  <!-- Services Section -->
   <section id="services" class="section dark">
     <h2>Our Services</h2>
     <p>Investments | Fundraising | Consulting</p>
   </section>
 
-  <!-- Portfolio -->
+  <!-- Portfolio Section -->
   <section id="portfolio" class="section light">
     <h2>Portfolio</h2>
-    
-    <!-- Swiper -->
+
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -106,13 +107,13 @@
     </div>
   </section>
 
-  <!-- Media -->
+  <!-- Media Section -->
   <section id="media" class="section dark">
     <h2>Media</h2>
     <p>Interviews and articles featuring Neeraj Gupta</p>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="section light">
     <h2>Contact Us</h2>
     <p>Email: info@rumexpartners.com</p>
@@ -124,9 +125,9 @@
     <p>© 2025 Rumex Partners. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script>
-    // Hero Slider
+    // Hero Slider Transition
     let current = 0;
     const slides = document.querySelectorAll('.hero-slide');
     setInterval(() => {
@@ -135,10 +136,9 @@
       slides[current].classList.add('active');
     }, 5000);
 
-    // Hamburger Menu
+    // Hamburger Menu Toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navLinks.classList.toggle('active');
@@ -150,10 +150,10 @@
   <script>
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 40,
       loop: true,
       autoplay: {
-        delay: 2500,
+        delay: 2000,
         disableOnInteraction: false,
       },
       pagination: {
@@ -165,10 +165,10 @@
         prevEl: ".swiper-button-prev",
       },
       breakpoints: {
-        1024: { slidesPerView: 4 },
-        768: { slidesPerView: 3 },
-        480: { slidesPerView: 2 },
-        320: { slidesPerView: 1 },
+        1200: { slidesPerView: 4 },
+        992: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        480: { slidesPerView: 1 },
       },
     });
   </script>
