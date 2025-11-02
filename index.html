@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rumex Partners</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <!-- Swiper CSS -->
@@ -19,7 +19,9 @@
   <header>
     <nav class="navbar container">
       <div class="logo">
-        <img src="logo.png" alt="Rumex Partners Logo" />
+        <a href="#home">
+          <img src="logo.png" alt="Rumex Partners Logo" />
+        </a>
       </div>
 
       <div class="hamburger" id="hamburger">
@@ -63,7 +65,7 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="section dark">
+  <section id="services" class="section gray">
     <div class="container">
       <h2>Our Services</h2>
       <p>Investments | Fundraising | Consulting</p>
@@ -73,33 +75,39 @@
   <!-- Portfolio Section -->
   <section id="portfolio" class="section light">
     <div class="container">
-      <h2>Portfolio</h2>
+      <h2>Our Portfolio</h2>
+      <p>Our partners and investments reflect our vision of scalable, sustainable growth.</p>
 
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="https://www.arapl.com/" target="_blank">
               <img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL" />
+              <p>ARAPL</p>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="https://creativegraphics.in/" target="_blank">
               <img src="CREATIVE GRAPHICS - LISTEDLOGO.jpg" alt="Creative Graphics" />
+              <p>Creative Graphics</p>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="https://www.dtml.co.in/" target="_blank">
               <img src="DTML - LISTEDLOGO.jpg" alt="DTML" />
+              <p>DTML</p>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="https://kaytexfabrics.com/" target="_blank">
-              <img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex" />
+              <img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex Fabrics" />
+              <p>Kaytex Fabrics</p>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="https://www.orianapower.com/" target="_blank">
               <img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana Power Limited" />
+              <p>Oriana Power Limited</p>
             </a>
           </div>
         </div>
@@ -113,10 +121,10 @@
   </section>
 
   <!-- Media Section -->
-  <section id="media" class="section dark">
+  <section id="media" class="section gray">
     <div class="container">
       <h2>Media</h2>
-      <p>Interviews and articles featuring Neeraj Gupta</p>
+      <p>Discover the latest insights, features, and interviews from Rumex Partners’ leadership.</p>
     </div>
   </section>
 
@@ -124,8 +132,8 @@
   <section id="contact" class="section light">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>Email: info@rumexpartners.com</p>
-      <p>Follow us on LinkedIn for updates.</p>
+      <p>Email: <a href="mailto:info@rumexpartners.com">info@rumexpartners.com</a></p>
+      <p>Follow us on <a href="https://linkedin.com" target="_blank">LinkedIn</a> for updates.</p>
     </div>
   </section>
 
@@ -136,8 +144,8 @@
 
   <!-- JavaScript -->
   <script>
-    // Hero Slider Transition
     document.addEventListener('DOMContentLoaded', () => {
+      // Hero Image Transition
       const slides = document.querySelectorAll('.hero-slide');
       let current = 0;
       setInterval(() => {
