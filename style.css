@@ -35,24 +35,25 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 60px;
+  padding: 16px 25px;
+  position: relative;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   color: var(--white);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .logo img {
-  height: 50px;
+  height: 45px;
   width: auto;
 }
 
-/* Navigation */
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -95,7 +96,7 @@ header {
   transform: scale(1);
 }
 
-/* Background images (replace with your own) */
+/* Replace with your hero backgrounds */
 .hero1 {
   background-image: url('hero-bg.jpg');
 }
@@ -170,7 +171,7 @@ header {
 .logo-grid img {
   width: 140px;
   height: auto;
-  filter: none; /* Full color logos */
+  filter: none;
   opacity: 0.95;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -189,52 +190,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 992px) {
-  .navbar {
-    padding: 16px 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  .section {
-    padding: 70px 20px;
-  }
-
-  .logo-grid img {
-    width: 110px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-}
-/* ====== HAMBURGER MENU (for mobile) ====== */
+/* ========== HAMBURGER MENU ========== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -255,7 +211,6 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Active state for cross animation */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
@@ -266,7 +221,7 @@ footer {
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* ====== MOBILE MENU ====== */
+/* ========== MOBILE MENU ========== */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -283,10 +238,33 @@ footer {
     gap: 20px;
     padding: 20px 0;
     display: none;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.4s ease;
   }
 
   .nav-links.active {
     display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    justify-content: flex-start;
   }
 }
 
+/* Small screen text sizes */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
