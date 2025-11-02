@@ -83,31 +83,26 @@
           <div class="swiper-slide">
             <a href="https://www.arapl.com/" target="_blank">
               <img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL" />
-              <p>ARAPL</p>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="https://creativegraphics.in/" target="_blank">
               <img src="CREATIVE GRAPHICS - LISTEDLOGO.jpg" alt="Creative Graphics" />
-              <p>Creative Graphics</p>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="https://www.dtml.co.in/" target="_blank">
               <img src="DTML - LISTEDLOGO.jpg" alt="DTML" />
-              <p>DTML</p>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="https://kaytexfabrics.com/" target="_blank">
               <img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex Fabrics" />
-              <p>Kaytex Fabrics</p>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="https://www.orianapower.com/" target="_blank">
               <img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana Power Limited" />
-              <p>Oriana Power Limited</p>
             </a>
           </div>
         </div>
@@ -171,6 +166,7 @@
       slidesPerView: 4,
       spaceBetween: 30,
       loop: true,
+      grabCursor: true,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -184,10 +180,11 @@
         prevEl: ".swiper-button-prev",
       },
       breakpoints: {
-        1200: { slidesPerView: 4 },
-        992: { slidesPerView: 3 },
-        768: { slidesPerView: 2 },
-        480: { slidesPerView: 1 },
+        1200: { slidesPerView: 4, spaceBetween: 40 },
+        992: { slidesPerView: 3, spaceBetween: 30 },
+        768: { slidesPerView: 2, spaceBetween: 20 },
+        600: { slidesPerView: 1.2, spaceBetween: 15, centeredSlides: true },
+        480: { slidesPerView: 1, spaceBetween: 10, centeredSlides: true },
       },
     });
   </script>
