@@ -48,6 +48,7 @@ header {
   width: auto;
 }
 
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -65,7 +66,7 @@ header {
   color: #cdd6f3;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   height: 100vh;
   position: relative;
@@ -91,9 +92,11 @@ header {
   transform: scale(1);
 }
 
+/* Background images */
 .hero1 {
   background-image: url('hero-bg.jpg');
 }
+
 .hero2 {
   background-image: url('hero-bg(2).jpg');
 }
@@ -157,16 +160,18 @@ header {
   justify-items: center;
 }
 
+/* 🟢 Updated section — full-colour logos */
 .logo-grid img {
   width: 130px;
-  filter: grayscale(100%);
-  opacity: 0.9;
-  transition: all 0.3s ease;
+  height: auto;
+  filter: none; /* removed grayscale */
+  opacity: 0.95;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .logo-grid img:hover {
-  filter: grayscale(0%);
   opacity: 1;
+  transform: scale(1.05);
 }
 
 /* Footer */
@@ -185,17 +190,21 @@ footer {
     gap: 10px;
     padding: 15px;
   }
+
   .nav-links {
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
   }
+
   .hero h1 {
     font-size: 2.2rem;
   }
+
   .hero p {
     font-size: 1.1rem;
   }
+
   .section {
     padding: 70px 20px;
   }
