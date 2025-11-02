@@ -5,40 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rumex Partners</title>
 
-  <!-- Fonts & CSS -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- ========== HEADER / NAVBAR ========== -->
+  <!-- Navbar -->
   <header>
     <nav class="navbar">
-      <!-- LOGO -->
       <div class="logo">
-        <a href="#home"><img src="logo.png" alt="Rumex Partners Logo" /></a>
+        <img src="logo.png" alt="Rumex Partners Logo" />
       </div>
 
-      <!-- HAMBURGER MENU (MOBILE) -->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      <!-- NAVIGATION LINKS -->
       <ul class="nav-links" id="nav-links">
-        <li><a href="#home" onclick="closeMenu()">Home</a></li>
-        <li><a href="#about" onclick="closeMenu()">About Us</a></li>
-        <li><a href="#services" onclick="closeMenu()">Services</a></li>
-        <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
-        <li><a href="#media" onclick="closeMenu()">Media</a></li>
-        <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ========== HERO SECTION ========== -->
+  <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-slide hero1 active"></div>
     <div class="hero-slide hero2"></div>
@@ -49,7 +50,7 @@
     </div>
   </section>
 
-  <!-- ========== ABOUT SECTION ========== -->
+  <!-- About -->
   <section id="about" class="section light">
     <h2>About Us</h2>
     <p>
@@ -58,55 +59,74 @@
     </p>
   </section>
 
-  <!-- ========== SERVICES SECTION ========== -->
+  <!-- Services -->
   <section id="services" class="section dark">
     <h2>Our Services</h2>
     <p>Investments | Fundraising | Consulting</p>
   </section>
 
-  <!-- ========== PORTFOLIO SECTION ========== -->
+  <!-- Portfolio -->
   <section id="portfolio" class="section light">
     <h2>Portfolio</h2>
-    <div class="logo-grid">
-      <a href="https://www.arapl.com/" target="_blank">
-        <img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL" />
-      </a>
-      <a href="https://creativegraphics.in/" target="_blank">
-        <img src="CREATIVE GRAPHICS - LISTEDLOGO.jpg" alt="Creative Graphics" />
-      </a>
-      <a href="https://www.dtml.co.in/" target="_blank">
-        <img src="DTML - LISTEDLOGO.jpg" alt="DTML" />
-      </a>
-      <a href="https://kaytexfabrics.com/" target="_blank">
-        <img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex" />
-      </a>
-      <a href="https://www.orianapower.com/" target="_blank">
-        <img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana Power Limited" />
-      </a>
+    
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="https://www.arapl.com/" target="_blank">
+            <img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL" />
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://creativegraphics.in/" target="_blank">
+            <img src="CREATIVE GRAPHICS - LISTEDLOGO.jpg" alt="Creative Graphics" />
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.dtml.co.in/" target="_blank">
+            <img src="DTML - LISTEDLOGO.jpg" alt="DTML" />
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://kaytexfabrics.com/" target="_blank">
+            <img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex" />
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.orianapower.com/" target="_blank">
+            <img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana Power Limited" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Swiper Controls -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </section>
 
-  <!-- ========== MEDIA SECTION ========== -->
+  <!-- Media -->
   <section id="media" class="section dark">
     <h2>Media</h2>
     <p>Interviews and articles featuring Neeraj Gupta</p>
   </section>
 
-  <!-- ========== CONTACT SECTION ========== -->
+  <!-- Contact -->
   <section id="contact" class="section light">
     <h2>Contact Us</h2>
     <p>Email: info@rumexpartners.com</p>
     <p>Follow us on LinkedIn for updates.</p>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- Footer -->
   <footer>
     <p>© 2025 Rumex Partners. All rights reserved.</p>
   </footer>
 
-  <!-- ========== JAVASCRIPT ========== -->
+  <!-- Scripts -->
   <script>
-    // Hero background slideshow
+    // Hero Slider
     let current = 0;
     const slides = document.querySelectorAll('.hero-slide');
     setInterval(() => {
@@ -115,7 +135,7 @@
       slides[current].classList.add('active');
     }, 5000);
 
-    // Mobile navbar toggle
+    // Hamburger Menu
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
@@ -123,11 +143,34 @@
       hamburger.classList.toggle('active');
       navLinks.classList.toggle('active');
     });
+  </script>
 
-    function closeMenu() {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-    }
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        1024: { slidesPerView: 4 },
+        768: { slidesPerView: 3 },
+        480: { slidesPerView: 2 },
+        320: { slidesPerView: 1 },
+      },
+    });
   </script>
 </body>
 </html>
