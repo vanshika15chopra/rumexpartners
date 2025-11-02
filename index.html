@@ -4,28 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rumex Partners</title>
+
+  <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Navbar -->
+  <!-- ========== HEADER / NAVBAR ========== -->
   <header>
     <nav class="navbar">
+      <!-- LOGO -->
       <div class="logo">
-        <img src="logo.png" alt="Rumex Partners Logo" />
+        <a href="#home"><img src="logo.png" alt="Rumex Partners Logo" /></a>
       </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+
+      <!-- HAMBURGER MENU (MOBILE) -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- NAVIGATION LINKS -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About Us</a></li>
+        <li><a href="#services" onclick="closeMenu()">Services</a></li>
+        <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+        <li><a href="#media" onclick="closeMenu()">Media</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section with Parallax -->
+  <!-- ========== HERO SECTION ========== -->
   <section id="home" class="hero">
     <div class="hero-slide hero1 active"></div>
     <div class="hero-slide hero2"></div>
@@ -36,7 +49,7 @@
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ========== ABOUT SECTION ========== -->
   <section id="about" class="section light">
     <h2>About Us</h2>
     <p>
@@ -45,54 +58,55 @@
     </p>
   </section>
 
-  <!-- Services -->
+  <!-- ========== SERVICES SECTION ========== -->
   <section id="services" class="section dark">
     <h2>Our Services</h2>
     <p>Investments | Fundraising | Consulting</p>
   </section>
 
-     <!-- Portfolio -->
-<section id="portfolio" class="section light">
-  <h2>Portfolio </h2>
-  <div class="logo-grid">
-    <a href="https://www.arapl.com/" target="_blank">
-      <img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL" />
-    </a>
-    <a href="https://creativegraphics.in/" target="_blank">
-      <img src="CREATIVE GRAPHICS - LISTEDLOGO.jpg" alt="Creative Graphics" />
-    </a>
-    <a href="https://www.dtml.co.in/" target="_blank">
-      <img src="DTML - LISTEDLOGO.jpg" alt="DTML" />
-    </a>
-    <a href="https://kaytexfabrics.com/" target="_blank">
-      <img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex" />
-    </a>
-    <a href="https://www.orianapower.com/" target="_blank">
-      <img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana Power Limited" />
-    </a>
-  </div>
-</section>
+  <!-- ========== PORTFOLIO SECTION ========== -->
+  <section id="portfolio" class="section light">
+    <h2>Portfolio</h2>
+    <div class="logo-grid">
+      <a href="https://www.arapl.com/" target="_blank">
+        <img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL" />
+      </a>
+      <a href="https://creativegraphics.in/" target="_blank">
+        <img src="CREATIVE GRAPHICS - LISTEDLOGO.jpg" alt="Creative Graphics" />
+      </a>
+      <a href="https://www.dtml.co.in/" target="_blank">
+        <img src="DTML - LISTEDLOGO.jpg" alt="DTML" />
+      </a>
+      <a href="https://kaytexfabrics.com/" target="_blank">
+        <img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex" />
+      </a>
+      <a href="https://www.orianapower.com/" target="_blank">
+        <img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana Power Limited" />
+      </a>
+    </div>
+  </section>
 
-  <!-- Media -->
+  <!-- ========== MEDIA SECTION ========== -->
   <section id="media" class="section dark">
     <h2>Media</h2>
     <p>Interviews and articles featuring Neeraj Gupta</p>
   </section>
 
-  <!-- Contact -->
+  <!-- ========== CONTACT SECTION ========== -->
   <section id="contact" class="section light">
     <h2>Contact Us</h2>
     <p>Email: info@rumexpartners.com</p>
     <p>Follow us on LinkedIn for updates.</p>
   </section>
 
-  <!-- Footer -->
+  <!-- ========== FOOTER ========== -->
   <footer>
     <p>© 2025 Rumex Partners. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for hero scroll/zoom effect -->
+  <!-- ========== JAVASCRIPT ========== -->
   <script>
+    // Hero background slideshow
     let current = 0;
     const slides = document.querySelectorAll('.hero-slide');
     setInterval(() => {
@@ -100,6 +114,20 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
     }, 5000);
+
+    // Mobile navbar toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
   </script>
 </body>
 </html>
