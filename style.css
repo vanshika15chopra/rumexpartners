@@ -81,43 +81,44 @@ header {
   transition: 0.3s;
 }
 
-/* ========== HERO SECTION (Zoom-In Animation like KSPL) ========== */
+/* ========== HERO SECTION ========== */
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh; /* works better for mobile */
   width: 100%;
   overflow: hidden;
   margin-top: 75px;
 }
 
-.hero::before {
-  content: "";
+/* Hero slides */
+.hero-slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('hero-bg.jpg') center center/cover no-repeat;
-  animation: zoomEffect 15s ease-in-out infinite;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
   transform: scale(1);
-  z-index: 0;
+  transition: opacity 1.5s ease-in-out, transform 15s ease-in-out;
 }
 
-@keyframes zoomEffect {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
-  100% {
-    transform: scale(1);
-  }
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1.08); /* zoom effect */
 }
 
-/* Dark overlay for text contrast */
-.hero::after {
-  content: "";
+/* Background images */
+.hero1 {
+  background-image: url('hero-bg.jpg');
+}
+.hero2 {
+  background-image: url('hero-bg(2).jpg');
+}
+
+/* Overlay for dark tint */
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -127,6 +128,7 @@ header {
   z-index: 1;
 }
 
+/* Hero text content */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -149,7 +151,7 @@ header {
   opacity: 0.9;
 }
 
-/* Optional button for CTA */
+/* CTA Button */
 .hero-content .btn {
   margin-top: 25px;
   padding: 12px 30px;
@@ -161,6 +163,7 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .hero-content .btn:hover {
   background: var(--white);
   color: var(--navy);
