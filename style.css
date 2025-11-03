@@ -960,3 +960,109 @@ footer {
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
+/* ===== Clean, Professional Navbar (like KSPL) ===== */
+header {
+  background-color: #0b1a39;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 45px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 5px 0;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #cfa253;
+  border-bottom: 2px solid #cfa253;
+}
+
+/* ===== Hamburger Menu ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ===== Responsive Navbar ===== */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #0b1a39;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+    gap: 25px;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+/* ===== Space Fix for Content Under Header ===== */
+body {
+  padding-top: 80px;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
