@@ -3,46 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
+  <title>Contact Us | Rumex Partners</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ===== Navbar ===== -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar container">
       <div class="logo">
-        <img src="logo.png" alt="Rumex Partners Logo">
+        <a href="index.html#home">
+          <img src="logo.png" alt="Rumex Partners Logo">
+        </a>
       </div>
       <ul class="nav-links">
         <li><a href="index.html#home">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#portfolio">Portfolio</a></li>
         <li><a href="index.html#media">Media</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
-      <div class="hamburger">
+      <div class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </div>
     </nav>
   </header>
 
- <section class="contact-section">
-  <div class="container">
-    <div class="contact-box">
-      <h1>Contact Us</h1>
-      <p>Write to us at</p>
-      <a href="mailto:info@rumexpartners.com">info@rumexpartners.com</a>
-      <div class="divider"></div>
+  <!-- ===== Hero Section ===== -->
+  <section class="contact-hero">
+    <div class="overlay"></div>
+    <h1>Contact Us</h1>
+  </section>
+
+  <!-- ===== Contact Message Section ===== -->
+  <section class="contact-message">
+    <div class="container">
+      <h2>Write to us at</h2>
+      <p><a href="mailto:info@rumexpartners.com">info@rumexpartners.com</a></p>
     </div>
-  </div>
-</section>
+  </section>
 
-
+  <!-- ===== Footer ===== -->
   <footer>
-    <p>© 2025 Rumex Partners. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Rumex Partners. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- ===== Mobile Menu Script ===== -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
