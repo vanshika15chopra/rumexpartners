@@ -1,3 +1,4 @@
+can you check in my index html what is wrong fix this issue in that and give me 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,19 +43,14 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero-slider">
-    <div class="hero-slide active" style="background-image: url('hero-bg.jpg');">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1>We invest in who you are — not just what you’ve built</h1>
-        <p>We don’t just fund. We build scalable futures.</p>
-      </div>
-    </div>
+  <section id="home" class="hero">
+    <div class="hero-slide hero1 active"></div>
+    <div class="hero-slide hero2"></div>
+    <div class="hero-overlay"></div>
 
-    <div class="hero-slide" style="background-image: url('hero-bg(2).jpg');">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-      </div>
+    <div class="hero-content">
+      <h1>We invest in who you are — not just what you’ve built</h1>
+      <p>We don’t just fund. We build scalable futures.</p>
     </div>
   </section>
 
@@ -63,7 +59,7 @@
     <div class="container">
       <h2>About Us</h2>
       <p>
-        Rumex Partners is a investment division of B2I platforms that invests proprietary capital across both listed and unlisted spaces.
+        Rumex Partners is a privately held family office that invests proprietary capital across both listed and unlisted spaces.
         We do not solicit public funds — instead, we deploy our own capital and expertise to build enduring value through strategic partnerships and long-term growth investments.
       </p>
     </div>
@@ -81,7 +77,7 @@
   <section id="portfolio" class="section light">
     <div class="container">
       <h2>Portfolio</h2>
-      <div class="swiper mySwiper">
+        <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="https://www.arapl.com/" target="_blank">
@@ -143,7 +139,7 @@
   <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Hero background fade slider
+      // Hero Image Transition
       const slides = document.querySelectorAll('.hero-slide');
       let current = 0;
       setInterval(() => {
