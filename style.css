@@ -566,3 +566,140 @@ footer {
     font-size: 1rem;
   }
 }
+/* ===== CONTACT PAGE ===== */
+
+.contact-hero {
+  position: relative;
+  height: 70vh;
+  background: url('contact-bg.jpg') center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  margin-top: 80px; /* adjust if navbar fixed */
+}
+
+.contact-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 29, 64, 0.6);
+}
+
+.contact-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.contact-message {
+  background: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contact-message h2 {
+  color: #0b1d40;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.contact-message a {
+  color: #c7a550;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.contact-message a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0b1d40;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* ===== NAVBAR (for mobile fix) ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #0b1d40;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a.active {
+  color: #c7a550;
+}
+
+/* ===== Hamburger Menu ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #0b1d40;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .contact-hero {
+    height: 50vh;
+  }
+
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-message {
+    padding: 60px 20px;
+  }
+}
