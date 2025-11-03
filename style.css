@@ -703,3 +703,70 @@ footer {
     padding: 60px 20px;
   }
 }
+/* ===== CONTACT PAGE FIX ===== */
+
+.contact-hero {
+  position: relative;
+  height: 60vh;
+  background: url('contact-bg.jpg') center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 29, 64, 0.75); /* dark overlay */
+}
+
+.contact-hero h1 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Centered white section below */
+.contact-message {
+  background: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contact-message h2 {
+  color: #0b1d40;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.contact-message p a {
+  color: #c7a550;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-message p a:hover {
+  text-decoration: underline;
+}
+
+/* Desktop adjustments */
+@media (min-width: 992px) {
+  .contact-hero {
+    height: 70vh;
+  }
+
+  .contact-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .contact-message {
+    padding: 120px 20px;
+  }
+}
