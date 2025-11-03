@@ -952,3 +952,11 @@ footer {
     padding: 120px 20px;
   }
 }
+.contact-hero::before,
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
