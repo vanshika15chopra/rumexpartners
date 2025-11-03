@@ -104,10 +104,10 @@ header {
 
 /* Hero images */
 .hero1 {
-  background-image: url('hero1.jpg'); /* Replace with your image */
+  background-image: url('hero-bg.jpg'); /* Replace with your image */
 }
 .hero2 {
-  background-image: url('hero2.jpg'); /* Optional second image */
+  background-image: url('hero-bg(2).jpg'); /* Optional second image */
 }
 
 .hero-slide.active {
