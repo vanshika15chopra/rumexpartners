@@ -69,6 +69,45 @@ header {
 .nav-links a:hover {
   color: #d5ddf8;
 }
+/* === Navbar Fix for Desktop === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-right: 0; /* remove extra spacing */
+  padding-right: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #d4d4d4;
+}
+
+/* Prevent unwanted right gap on large screens */
+@media (min-width: 992px) {
+  .navbar.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 
 /* ========== HERO SECTION ========== */
 .hero {
