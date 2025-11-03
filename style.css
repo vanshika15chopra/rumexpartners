@@ -765,6 +765,188 @@ footer {
   .contact-hero h1 {
     font-size: 3.5rem;
   }
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #0b1d40;
+  background-color: #fff;
+}
+
+/* ===== Navbar ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0b1d40;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #c7a550;
+}
+
+/* ===== Hamburger Menu ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 4px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* ===== Contact Hero Section ===== */
+.contact-hero {
+  position: relative;
+  height: 70vh;
+  background: url("contact-bg.jpg") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 29, 64, 0.75); /* Dark overlay */
+}
+
+.contact-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ===== Contact Message Section ===== */
+.contact-message {
+  background: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contact-message h2 {
+  font-size: 1.8rem;
+  color: #0b1d40;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-message p a {
+  color: #c7a550;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact-message p a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0b1d40;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #0b1d40;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+    padding: 30px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .contact-hero {
+    height: 50vh;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-message {
+    padding: 60px 20px;
+  }
+}
+
+/* ===== Hamburger Animation ===== */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 
   .contact-message {
     padding: 120px 20px;
