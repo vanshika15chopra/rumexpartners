@@ -468,3 +468,18 @@ footer {
   line-height: 1.8;
   opacity: 0.95;
 }
+/* Make Philosophy Headings Smaller and Cleaner */
+.philosophy-title {
+  font-size: 1.4rem;       /* smaller heading */
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;         /* white because it's on dark bg */
+  line-height: 1.3;
+}
+
+.philosophy-item p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #ffffff;
+  opacity: 0.9;
+}
