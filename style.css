@@ -421,65 +421,60 @@ footer {
     font-size: 0.85rem;
   }
 }
-/* ===== PHILOSOPHY SECTION (Premium KSPL Style) ===== */
+/* =======================
+   CLEAN PHILOSOPHY SECTION
+   ======================= */
 .philosophy-section {
   position: relative;
   background: url('philosophy-bg.jpg') center/cover no-repeat;
   padding: 100px 0;
-  color: white;
+  color: #fff;
 }
 
 .philosophy-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(11, 29, 64, 0.7); /* navy overlay */
+  background: rgba(11, 29, 64, 0.7);
 }
 
 .philosophy-inner {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   text-align: center;
 }
 
 .philosophy-inner h2 {
   font-size: 2.2rem;
   font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
 }
 
 .philosophy-line {
   width: 80px;
   height: 3px;
   background: var(--gold);
-  margin: 0 auto 40px;
+  margin: 15px auto 50px;
   border-radius: 2px;
 }
 
-.philosophy-content {
+/* 3 Equal Columns */
+.philosophy-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
-  text-align: left;
+  margin-top: 20px;
 }
 
-.philosophy-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  opacity: 0.95;
-}
-/* Make Philosophy Headings Smaller and Cleaner */
-.philosophy-title {
-  font-size: 1.4rem;       /* smaller heading */
+/* Heading inside each block */
+.philosophy-item h3 {
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #ffffff;         /* white because it's on dark bg */
-  line-height: 1.3;
+  color: #fff;
 }
 
+/* Body text */
 .philosophy-item p {
   font-size: 1rem;
-  line-height: 1.7;
-  color: #ffffff;
-  opacity: 0.9;
+  line-height: 1.8;
+  opacity: 0.95;
 }
