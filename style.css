@@ -421,3 +421,50 @@ footer {
     font-size: 0.85rem;
   }
 }
+/* ===== PHILOSOPHY SECTION (Premium KSPL Style) ===== */
+.philosophy-section {
+  position: relative;
+  background: url('philosophy-bg.jpg') center/cover no-repeat;
+  padding: 100px 0;
+  color: white;
+}
+
+.philosophy-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 29, 64, 0.7); /* navy overlay */
+}
+
+.philosophy-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.philosophy-inner h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.philosophy-line {
+  width: 80px;
+  height: 3px;
+  background: var(--gold);
+  margin: 0 auto 40px;
+  border-radius: 2px;
+}
+
+.philosophy-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  text-align: left;
+}
+
+.philosophy-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
