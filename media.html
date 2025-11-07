@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===== MEDIA PAGE STYLING ===== */
+    .media-hero {
+      height: 45vh;
+      background: url('philosophy-bg.jpg') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .media-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(11,29,64,0.6);
+    }
+
+    .media-hero h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 2.8rem;
+      font-weight: 600;
+    }
+
+    .media-section {
+      padding: 80px 0;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .media-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .media-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .media-thumb {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .media-content {
+      padding: 20px;
+    }
+
+    .media-content h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .media-content p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    .media-btn {
+      display: inline-block;
+      padding: 8px 14px;
+      background: var(--gold);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .media-btn:hover {
+      background: #b18d4f;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar container">
+      <div class="logo">
+        <a href="index.html#home"><img src="logo.png" alt="Rumex Partners"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="media.html" class="active">Media</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="media-hero">
+    <h1>Articles</h1>
+  </section>
+
+  <!-- MEDIA CONTENT -->
+  <section class="media-section">
+    <div class="container">
+      <h2 style="text-align:center;">Articles of Neeraj Gupta</h2>
+
+      <div class="media-grid">
+
+        <!-- CARD 1 -->
+        <div class="media-card">
+          <img src="media1.jpg" class="media-thumb" alt="Interview Image">
+          <div class="media-content">
+            <h3>ARAPL onboards auto-tech sector veteran Neeraj Gupta, as Strategy & Growth Advisory Director</h3>
+            <a href="https://www.apnnews.com/arapl-onboards-auto-tech-sector-veteran-neeraj-gupta-as-strategy-growth-advisory-director/" target="_blank" class="media-btn">Read More</a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="media-card">
+          <img src="media2.jpg" class="media-thumb" alt="Interview Image">
+          <div class="media-content">
+            <h3>Rumex Partners: Building Scalable Futures</h3>
+            <p>Coverage on the investment philosophy and strategic growth approach of Rumex Partners.</p>
+            <a href="https://example.com" target="_blank" class="media-btn">Read More</a>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="media-card">
+          <img src="media3.jpg" class="media-thumb" alt="Interview Image">
+          <div class="media-content">
+            <h3>Founder Spotlight: Human-Centric Investing</h3>
+            <p>Neeraj Gupta talks about partnering with founders who create lasting impact.</p>
+            <a href="https://example.com" target="_blank" class="media-btn">Read More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Rumex Partners. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
