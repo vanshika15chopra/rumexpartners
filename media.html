@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media</title>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* ===== MEDIA PAGE STYLING ===== */
+    /* ===== MEDIA HERO ===== */
     .media-hero {
       height: 45vh;
       background: url('philosophy-bg.jpg') center/cover no-repeat;
@@ -22,14 +19,12 @@
       align-items: center;
       color: white;
     }
-
     .media-hero::after {
       content: "";
       position: absolute;
       inset: 0;
       background: rgba(11,29,64,0.6);
     }
-
     .media-hero h1 {
       position: relative;
       z-index: 2;
@@ -37,69 +32,42 @@
       font-weight: 600;
     }
 
+    /* ===== KSPL STYLE MEDIA LIST ===== */
     .media-section {
       padding: 80px 0;
     }
 
-    .media-grid {
+    .media-grid-kspl {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 60px;
+      margin-top: 60px;
+      text-align: center;
     }
 
-    .media-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
+    .media-item a {
+      text-decoration: none;
+      color: var(--navy);
     }
 
-    .media-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    }
-
-    .media-thumb {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .media-content {
-      padding: 20px;
-    }
-
-    .media-content h3 {
+    .media-title {
       font-size: 1.1rem;
       font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-
-    .media-content p {
-      font-size: 0.95rem;
-      opacity: 0.85;
       margin-bottom: 15px;
-      line-height: 1.7;
+      line-height: 1.5;
+      text-align: center;
     }
 
-    .media-btn {
-      display: inline-block;
-      padding: 8px 14px;
-      background: var(--gold);
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: 0.3s ease;
+    .media-img {
+      width: 90%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
     }
 
-    .media-btn:hover {
-      background: #b18d4f;
+    .media-item:hover .media-title {
+      color: var(--gold);
     }
   </style>
 
@@ -127,40 +95,37 @@
     <h1>Media</h1>
   </section>
 
-  <!-- MEDIA CONTENT -->
+  <!-- MEDIA LIST -->
   <section class="media-section">
     <div class="container">
       <h2 style="text-align:center;">Articles of Neeraj Gupta</h2>
 
-      <div class="media-grid">
+      <div class="media-grid-kspl">
 
-        <!-- CARD 1 -->
-        <div class="media-card">
-          <img src="media1.jpg" class="media-thumb" alt="Interview Image">
-          <div class="media-content">
-            <h3>ARAPL onboards auto-tech sector veteran Neeraj Gupta, as Strategy & Growth Advisory Director</h3>
-            <a href="https://www.apnnews.com/arapl-onboards-auto-tech-sector-veteran-neeraj-gupta-as-strategy-growth-advisory-director/" target="_blank" class="media-btn">Read More</a>
-          </div>
+        <!-- ARTICLE 1 -->
+        <div class="media-item">
+          <a href="https://www.apnnews.com/arapl-onboards-auto-tech-sector-veteran-neeraj-gupta-as-strategy-growth-advisory-director/" target="_blank">
+            <h3 class="media-title">
+              ARAPL onboards auto-tech sector veteran Neeraj Gupta, as Strategy & Growth Advisory Director
+            </h3>
+            <img src="media1.jpg" alt="Article Image" class="media-img">
+          </a>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="media-card">
-          <img src="media2.jpg" class="media-thumb" alt="Interview Image">
-          <div class="media-content">
-            <h3>Rumex Partners: Building Scalable Futures</h3>
-            <p>Coverage on the investment philosophy and strategic growth approach of Rumex Partners.</p>
-            <a href="https://example.com" target="_blank" class="media-btn">Read More</a>
-          </div>
+        <!-- ARTICLE 2 -->
+        <div class="media-item">
+          <a href="https://www.equitybulls.com/category.php?id=334671" target="_blank">
+            <h3 class=Anil Kumar Goel, Prashant Jain and Neeraj Gupta participate in Oriana Power's pre-IPO funding</h3>
+            <img src="media2.jpg" alt="Article Image" class="media-img">
+          </a>
         </div>
 
-        <!-- CARD 3 -->
-        <div class="media-card">
-          <img src="media3.jpg" class="media-thumb" alt="Interview Image">
-          <div class="media-content">
-            <h3>Founder Spotlight: Human-Centric Investing</h3>
-            <p>Neeraj Gupta talks about partnering with founders who create lasting impact.</p>
-            <a href="https://example.com" target="_blank" class="media-btn">Read More</a>
-          </div>
+        <!-- ARTICLE 3 -->
+        <div class="media-item">
+          <a href="https://yourstory.com/2008/09/yourstory-in-tete-a-tete-with-neeraj-gupta-of-meru-cabs" target="_blank">
+            <h3 class="media-title">Yourstory in tete-a -tete with Neeraj Gupta of Meru cabs</h3>
+            <img src="media3.jpg" alt="Article Image" class="media-img">
+          </a>
         </div>
 
       </div>
