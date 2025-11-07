@@ -47,15 +47,22 @@
 
     .media-item a {
       text-decoration: none;
-      color: var(--navy);
     }
 
+    /* KSPL Blue Titles */
     .media-title {
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 15px;
       line-height: 1.5;
       text-align: center;
+      color: #1e3a8a; /* KSPL Blue */
+      transition: 0.3s;
+    }
+
+    .media-item:hover .media-title {
+      color: #15317e;
+      text-decoration: underline;
     }
 
     .media-img {
@@ -65,28 +72,37 @@
       display: block;
       margin: 0 auto;
     }
-
-    .media-item:hover .media-title {
-      color: var(--gold);
-    }
   </style>
 
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ✅ NAVBAR WITH HAMBURGER (FULL WORKING COPY) -->
   <header>
     <nav class="navbar container">
+      
       <div class="logo">
-        <a href="index.html#home"><img src="logo.png" alt="Rumex Partners"></a>
+        <a href="index.html#home">
+          <img src="logo.png" alt="Rumex Partners Logo">
+        </a>
       </div>
-      <ul class="nav-links">
+
+      <!-- ✅ HAMBURGER MENU -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- ✅ NAV LINKS with ID for JS -->
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html#home">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="media.html" class="active">Media</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
+
     </nav>
   </header>
 
@@ -98,6 +114,7 @@
   <!-- MEDIA LIST -->
   <section class="media-section">
     <div class="container">
+      
       <h2 style="text-align:center;">Articles of Neeraj Gupta</h2>
 
       <div class="media-grid-kspl">
@@ -129,6 +146,7 @@
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -136,6 +154,18 @@
   <footer>
     <p>© 2025 Rumex Partners. All rights reserved.</p>
   </footer>
+
+
+  <!-- ✅ ✅ MOBILE MENU SCRIPT (fixes missing 3 dots issue) -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
 </body>
 </html>
