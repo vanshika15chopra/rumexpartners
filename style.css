@@ -551,3 +551,110 @@ footer {
   display: block;
   margin: 0 auto;
 }
+/* ================= KEDIA-STYLE CEO PAGE ================= */
+
+.kspl-ceo-section {
+    padding: 80px 0;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Title */
+.ceo-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ceo-title h1 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.title-line {
+    width: 80px;
+    height: 4px;
+    background: #d4b068; /* KSPL gold */
+    margin: 12px auto 0;
+    border-radius: 3px;
+}
+
+/* Row Layout */
+.ceo-row {
+    max-width: 1200px;
+    margin: 0 auto 90px auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 30px;
+}
+
+.ceo-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image */
+.ceo-img-box img {
+    width: 380px;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Text */
+.ceo-text h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1d1d1d;
+}
+
+.ceo-designation {
+    font-size: 17px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.ceo-description {
+    font-size: 18px;
+    line-height: 32px;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.ceo-link {
+    color: #d4b068;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ceo-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media(max-width: 900px) {
+    .ceo-row,
+    .ceo-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ceo-img-box img {
+        width: 280px;
+        height: 330px;
+    }
+
+    .ceo-text h2 {
+        font-size: 28px;
+    }
+
+    .ceo-description {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
