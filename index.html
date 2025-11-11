@@ -147,68 +147,70 @@
     </div>
   </section>
 
-  <!-- ================= RUMEX CEO PAGE — KEDIA EXACT STYLE ================= -->
-<section id="ceo-page" class="kspl-ceo-section">
+ <!-- ====================== CEO SLIDER SECTION ====================== -->
+<section class="ceo-slider-section">
 
-    <!-- MAIN HEADING -->
-    <div class="ceo-title">
-        <h1>Leadership Team</h1>
-        <div class="title-line"></div>
-    </div>
+    <div class="swiper ceoSwiper">
+        <div class="swiper-wrapper">
 
-    <!-- ================= NEERAJ GUPTA ================= -->
-    <div class="ceo-row">
-        
-        <!-- Image -->
-        <div class="ceo-img-box">
-            <img src="Neeraj-gupta.jpg" alt="Neeraj Gupta">
+            <!-- ===== Slide 1 – NEERAJ ===== -->
+            <div class="swiper-slide">
+                <div class="ceo-wrapper">
+
+                    <div class="ceo-left">
+                        <img src="Neeraj-gupta.jpg" alt="Neeraj Gupta">
+                    </div>
+
+                    <div class="ceo-right">
+                        <p class="ceo-quote fade-up">
+                            “Leadership is about creating meaningful value and inspiring people to reach their highest potential.”
+                        </p>
+
+                        <h3>Neeraj Gupta</h3>
+                        <p class="ceo-job">Managing Partner</p>
+
+                        <a class="ceo-link" href="https://www.linkedin.com/in/neerajguptameru/" target="_blank">
+                            View LinkedIn →
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ===== Slide 2 – RUHI ===== -->
+            <div class="swiper-slide">
+                <div class="ceo-wrapper">
+
+                    <div class="ceo-left">
+                        <img src="Ruhi-gupta.jpg" alt="Ruhi Gupta">
+                    </div>
+
+                    <div class="ceo-right">
+                        <p class="ceo-quote fade-up">
+                            “Success is built on clarity, discipline and the courage to take visionary decisions.”
+                        </p>
+
+                        <h3>Ruhi Gupta</h3>
+                        <p class="ceo-job">Manager</p>
+
+                        <a class="ceo-link" href="https://www.linkedin.com/in/ruhi-gupta1/" target="_blank">
+                            View LinkedIn →
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
-        <!-- Text -->
-        <div class="ceo-text">
-            <h2>Neeraj Gupta</h2>
-            <p class="ceo-designation">Founder & CEO – Rumex Partners</p>
-
-            <p class="ceo-description">
-                A visionary leader with deep experience in listed and unlisted investments.  
-                Neeraj Gupta brings strategic clarity, operational excellence, and long-term  
-                value creation approach to Rumex Partners. He believes leadership is built  
-                through discipline, foresight, and commitment to impact.
-            </p>
-
-            <a href="https://www.linkedin.com/in/neerajguptameru/" target="_blank" class="ceo-link">
-                View LinkedIn →
-            </a>
-        </div>
-
-    </div>
-
-    <!-- ================= RUHI GUPTA ================= -->
-    <div class="ceo-row reverse">
-
-        <div class="ceo-img-box">
-            <img src="Ruhi-gupta.jpg" alt="Ruhi Gupta">
-        </div>
-
-        <div class="ceo-text">
-            <h2>Ruhi Gupta</h2>
-            <p class="ceo-designation">Co-Founder & Director – Rumex Partners</p>
-
-            <p class="ceo-description">
-                Ruhi Gupta leads Rumex with strong organisational insight, disciplined execution  
-                and people-first leadership. Her decision-making philosophy focuses on innovation,  
-                transparency, and consistent long-term growth built on clarity and trust.
-            </p>
-
-            <a href="https://www.linkedin.com/in/ruhi-gupta1/" target="_blank" class="ceo-link">
-                View LinkedIn →
-            </a>
-        </div>
+        <!-- Controls -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
 
     </div>
 
 </section>
-
 
   <!-- Media Section -->
   <section id="media" class="section gray">
@@ -283,5 +285,27 @@
       },
     });
   </script>
+  <script>
+  var swiper = new Swiper(".ceoSwiper", {
+    loop: true,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: {
+      delay: 4000, // 4 seconds auto-slide
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
 </body>
 </html>
