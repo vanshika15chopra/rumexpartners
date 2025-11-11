@@ -729,3 +729,13 @@ footer {
         opacity: 1;
     }
 }
+/* --- Remove ALL white card styles globally ---- */
+.ceo-container,
+.ceo-wrapper,
+.ceo-left,
+.ceo-right,
+.swiper-slide > div,
+.ceo-slider-section * {
+    background: transparent !important;
+    box-shadow: none !important;
+}
