@@ -551,110 +551,124 @@ footer {
   display: block;
   margin: 0 auto;
 }
-/* ================= KEDIA-STYLE CEO PAGE ================= */
+/* ========================= CEO SLIDER (KSPL STYLE) ========================= */
 
-.kspl-ceo-section {
-    padding: 80px 0;
-    background: #ffffff;
-    font-family: 'Poppins', sans-serif;
+.ceo-slider-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+    background: url("bull-bg.jpg") right center / cover no-repeat;
 }
 
-/* Title */
-.ceo-title {
-    text-align: center;
-    margin-bottom: 60px;
+/* Brown overlay */
+.ceo-slider-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(60, 35, 15, 0.80); /* rich brown KSPL-style overlay */
+    z-index: 1;
 }
 
-.ceo-title h1 {
-    font-size: 42px;
-    font-weight: 600;
-    color: #222;
-    letter-spacing: 1px;
+/* Bring slider above overlay */
+.ceo-slider-section .swiper {
+    position: relative;
+    z-index: 2;
 }
 
-.title-line {
-    width: 80px;
-    height: 4px;
-    background: #d4b068; /* KSPL gold */
-    margin: 12px auto 0;
-    border-radius: 3px;
-}
-
-/* Row Layout */
-.ceo-row {
+/* Flex layout like KSPL */
+.ceo-wrapper {
     max-width: 1200px;
-    margin: 0 auto 90px auto;
+    margin: auto;
     display: flex;
     align-items: center;
-    gap: 50px;
-    padding: 0 30px;
+    gap: 40px;
+    padding: 0 40px;
 }
 
-.ceo-row.reverse {
-    flex-direction: row-reverse;
-}
-
-/* Image */
-.ceo-img-box img {
-    width: 380px;
-    height: 430px;
+/* LEFT CEO IMAGE */
+.ceo-left img {
+    width: 480px;
+    height: 360px;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
-/* Text */
-.ceo-text h2 {
-    font-size: 34px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: #1d1d1d;
+/* RIGHT TEXT */
+.ceo-right {
+    color: #fff;
+    max-width: 530px;
 }
 
-.ceo-designation {
-    font-size: 17px;
-    color: #777;
+.ceo-quote {
+    font-size: 28px;
+    line-height: 42px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Quote fade-up animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeUp 1.5s ease forwards 0.3s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ceo-right h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.ceo-job {
+    font-size: 18px;
+    letter-spacing: 1px;
+    opacity: 0.85;
     margin-bottom: 20px;
 }
 
-.ceo-description {
-    font-size: 18px;
-    line-height: 32px;
-    color: #333;
-    margin-bottom: 25px;
-    font-weight: 300;
-}
-
 .ceo-link {
-    color: #d4b068;
     font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.ceo-link:hover {
+    color: #fff;
     text-decoration: underline;
 }
 
-/* Mobile Responsive */
+/* Swiper Controls */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
+    opacity: 1;
+}
+
 @media(max-width: 900px) {
-    .ceo-row,
-    .ceo-row.reverse {
+    .ceo-wrapper {
         flex-direction: column;
         text-align: center;
     }
 
-    .ceo-img-box img {
-        width: 280px;
-        height: 330px;
+    .ceo-left img {
+        width: 320px;
+        height: 260px;
     }
 
-    .ceo-text h2 {
-        font-size: 28px;
-    }
-
-    .ceo-description {
-        font-size: 16px;
-        line-height: 28px;
+    .ceo-quote {
+        font-size: 22px;
+        line-height: 32px;
     }
 }
