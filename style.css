@@ -653,3 +653,79 @@ footer {
         line-height: 32px;
     }
 }
+/* ==================== FINAL MOBILE FIX FOR CEO SLIDER ==================== */
+
+@media (max-width: 900px) {
+
+    /* Reduce section padding */
+    .ceo-slider-section {
+        padding: 60px 0;
+        background-position: center right;
+        background-size: cover;
+    }
+
+    /* Stack layout */
+    .ceo-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 10px 20px;
+    }
+
+    /* ✅ FIX IMAGE TOO LARGE / CROPPED */
+    .ceo-photo img {
+        width: 85%;
+        max-width: 300px;
+        height: auto;
+        object-fit: contain !important;
+        border-radius: 12px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* ✅ FIX TEXT */
+    .ceo-info {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .ceo-info .quote {
+        font-size: 19px;
+        line-height: 28px;
+        margin-bottom: 18px;
+        opacity: 1 !important;
+        animation: none !important;  /* Prevent animation weirdness on mobile */
+    }
+
+    .ceo-info h3 {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .ceo-info .role {
+        font-size: 15px;
+        opacity: 0.9;
+        margin-bottom: 12px;
+    }
+
+    /* ✅ FIX SWIPER NAVIGATION */
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none; /* KSPL hides arrows on mobile */
+    }
+
+    .swiper-pagination {
+        margin-top: 10px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        background: white;
+        opacity: 0.4;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+    }
+}
