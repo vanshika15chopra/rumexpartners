@@ -1,72 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumex Partners - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumex Partners - Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ==================== NAVBAR (same as your site) ==================== -->
-<header>
+  <!-- ==================== NAVBAR (Same as Homepage) ==================== -->
+  <header id="home">
     <nav class="navbar">
-        <div class="logo">
-            <img src="logo.png" alt="Rumex Partners">
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+      <div class="logo">
+        <img src="logo.png" alt="Rumex Partners">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
-</header>
+  </header>
 
-<!-- ==================== PORTFOLIO HERO SPACE ==================== -->
-<section class="portfolio-hero-space"></section>
+  <!-- ✅ Offset for Fixed Navbar -->
+  <div style="height: 85px;"></div>
 
-<!-- ==================== PORTFOLIO SECTION (KSPL STYLE) ==================== -->
-<section class="portfolio-section">
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="portfolio-hero-space">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Our Portfolio</h1>
+      <p>Discover the companies we proudly partner with and invest in.</p>
+    </div>
+  </section>
 
+  <!-- ==================== PORTFOLIO SECTION (KSPL STYLE) ==================== -->
+  <section class="portfolio-section">
     <div class="portfolio-title">
-        <h1>Portfolio</h1>
-        <div class="underline"></div>
+      <h1>Portfolio</h1>
+      <div class="underline"></div>
     </div>
 
     <!-- LISTED COMPANIES -->
     <h2 class="category-title">Listed Companies</h2>
 
     <div class="portfolio-grid">
-        <div class="portfolio-card"><img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL"></div>
-        <div class="portfolio-card"><img src="CREATIVE GRAPHICS - LISTEDLOGO.jpg" alt="Creative Graphics"></div>
-        <div class="portfolio-card"><img src="DTML - LISTEDLOGO.jpg" alt="DTML"></div>
-        <div class="portfolio-card"><img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex"></div>
-        <div class="portfolio-card"><img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana"></div>
+      <div class="portfolio-card"><img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL"></div>
+      <div class="portfolio-card"><img src="CREATIVE GRAPHICS - LISTEDLOGO.jpg" alt="Creative Graphics"></div>
+      <div class="portfolio-card"><img src="DTML - LISTEDLOGO.jpg" alt="DTML"></div>
+      <div class="portfolio-card"><img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex"></div>
+      <div class="portfolio-card"><img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana"></div>
     </div>
 
     <!-- UNLISTED COMPANIES -->
     <h2 class="category-title">Unlisted Companies</h2>
 
     <div class="portfolio-grid">
-        <div class="portfolio-card"><img src="Lumins-logo.png" alt="Lumins"></div>
-        <div class="portfolio-card"><img src="Shellz-logo.png" alt="Shellz"></div>
-        <div class="portfolio-card"><img src="FarmPeace-logo.png" alt="FarmPeace"></div>
-        <div class="portfolio-card"><img src="GoIPO-logo.png" alt="GoIPO"></div>
-        <div class="portfolio-card"><img src="Xangars-logo.png" alt="Xangars"></div>
-        <div class="portfolio-card"><img src="Insuretech-logo.png" alt="InsureTech"></div>
+      <div class="portfolio-card"><img src="Lumins-logo.png" alt="Lumins"></div>
+      <div class="portfolio-card"><img src="Shellz-logo.png" alt="Shellz"></div>
+      <div class="portfolio-card"><img src="FarmPeace-logo.png" alt="FarmPeace"></div>
+      <div class="portfolio-card"><img src="GoIPO-logo.png" alt="GoIPO"></div>
+      <div class="portfolio-card"><img src="Xangars-logo.png" alt="Xangars"></div>
+      <div class="portfolio-card"><img src="Insuretech-logo.png" alt="InsureTech"></div>
     </div>
+  </section>
 
-</section>
+  <!-- ==================== FOOTER (Same as Homepage) ==================== -->
+  <footer>
+    <p>© 2025 Rumex Partners. All Rights Reserved.</p>
+  </footer>
 
-<!-- ==================== FOOTER (same as your site) ==================== -->
-<footer class="footer">
-    <div class="footer-content">
-        <p>© 2025 Rumex Partners. All Rights Reserved.</p>
-    </div>
-</footer>
+  <!-- ==================== SCRIPT ==================== -->
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close nav when link clicked (mobile fix)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
