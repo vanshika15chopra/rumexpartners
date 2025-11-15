@@ -288,7 +288,7 @@
     });
   </script>
 
- <!-- Swiper JS -->
+<!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
@@ -317,16 +317,20 @@ var portfolioSwiper = new Swiper(".portfolioSwiper", {
       320: { slidesPerView: 1, centeredSlides: true },
     },
 });
-</script>
 
-  var swiper = new Swiper(".ceoSwiper", {
+// --- CEO Swiper (correct placement)
+var swiper = new Swiper(".ceoSwiper", {
     loop: true,
     effect: "fade",
     autoplay: { delay: 4000 },
     pagination: { el: ".swiper-pagination", clickable: true },
-    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
-  });
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+});
 </script>
 
 </body>
 </html>
+
