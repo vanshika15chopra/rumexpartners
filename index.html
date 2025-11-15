@@ -185,14 +185,6 @@
   </div>
 </section>
 
-        
-        <!-- Swiper Controls -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </div>
-  </section>
 
  <!-- ====================== CEO SLIDER SECTION ====================== -->
 <section class="ceo-slider-section">
@@ -303,11 +295,11 @@
     });
   </script>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    <script>
-  var portfolioSwiper = new Swiper(".portfolioSwiper", {
+ <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+var portfolioSwiper = new Swiper(".portfolioSwiper", {
     slidesPerView: 4,
     spaceBetween: 40,
     loop: true,
@@ -331,9 +323,9 @@
       480: { slidesPerView: 1.3, centeredSlides: true },
       320: { slidesPerView: 1, centeredSlides: true },
     },
-  });
+});
 </script>
-<script>
+
   var swiper = new Swiper(".ceoSwiper", {
     loop: true,
     effect: "fade",
