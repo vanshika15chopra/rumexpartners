@@ -856,3 +856,116 @@ footer {
     font-size: 0.95rem;
   }
 }
+/* ================================
+   PORTFOLIO PAGE – KSPL STYLE
+   ================================ */
+
+/* HERO */
+.portfolio-hero {
+  height: 45vh;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.portfolio-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11,29,64,0.65);
+}
+
+.portfolio-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.9rem;
+  font-weight: 600;
+}
+
+/* MAIN SECTION */
+.portfolio-section {
+  padding: 100px 40px;
+  background: #f8f8f8;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.portfolio-header h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #0b1d40;
+}
+
+.portfolio-header .line {
+  width: 80px;
+  height: 4px;
+  background: #caa35f; /* your gold */
+  margin: 12px auto;
+  border-radius: 3px;
+}
+
+/* CATEGORY TITLE */
+.portfolio-category {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 45px 0 25px;
+  color: #0b1d40;
+}
+
+/* GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* CARDS */
+.portfolio-card {
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.portfolio-card img {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-section {
+    padding: 50px 20px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-hero h1 {
+    font-size: 2.1rem;
+  }
+}
