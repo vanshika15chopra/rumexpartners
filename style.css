@@ -848,5 +848,5 @@ footer {
 }
 /* Fix portfolio hero hidden behind navbar */
 .portfolio-hero {
-  padding-top: 120px !important;  /* pushes text downward */
+  padding-top: 140px !important;  /* pushes text downward */
 }
