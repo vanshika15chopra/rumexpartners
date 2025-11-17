@@ -49,7 +49,7 @@ header {
 .logo img {
   height: 180px;  /* increased from 38px */
   width: auto;
-  max-width: 400px; /* optional: adjust if the logo becomes too wide */
+  max-width: 300px; /* optional: adjust if the logo becomes too wide */
   transition: all 0.3s ease; /* optional: smooth resizing if navbar shrinks on scroll */
 }
 
@@ -323,7 +323,7 @@ footer {
   }
 
   .logo img {
-    height: 32px;
+    height: 180px;
   }
 
   .hero h1 {
