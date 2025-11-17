@@ -856,4 +856,28 @@ footer {
   }
 }
 /* ================================
+/* Portfolio Page Hero */
+.portfolio-hero {
+  background-image: url('hero-bg(2).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 55vh;
+}
+
+.portfolio-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 29, 64, 0.65);
+  z-index: 1;
+}
+
+.portfolio-hero .inner-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
 
