@@ -837,3 +837,12 @@ footer {
   color: #fff;
   text-align: center;
 }
+/* Portfolio Hero Title Fix */
+.portfolio-hero .inner-hero-content h1 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
