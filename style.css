@@ -846,3 +846,7 @@ footer {
   font-weight: 700;
   text-transform: uppercase;
 }
+/* Fix portfolio hero hidden behind navbar */
+.portfolio-hero {
+  padding-top: 120px !important;  /* pushes text downward */
+}
