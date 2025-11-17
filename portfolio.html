@@ -1,107 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rumex Partners - Portfolio</title>
+  <title>Rumex Partners – Portfolio</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    /* Header Section */
+    .top-banner {
+      background: url('banner.jpg') center/cover no-repeat;
+      height: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top-banner h1 {
+      color: white;
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section {
+      padding: 60px 40px;
+      background: #f5f5f5;
+    }
+
+    .portfolio-filter {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .portfolio-filter ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .portfolio-filter ul li {
+      display: inline-block;
+      margin: 0 20px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #777;
+    }
+
+    .portfolio-filter ul li.active {
+      color: #000;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .portfolio-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .portfolio-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .portfolio-box img {
+      width: 160px;
+      height: 90px;
+      object-fit: contain;
+    }
+
+    .portfolio-box p {
+      margin-top: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- ==================== NAVBAR (Same as Homepage) ==================== -->
-  <header id="home">
-    <nav class="navbar">
-      <div class="logo">
-        <img src="logo.png" alt="Rumex Partners">
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="portfolio.html" class="active">Portfolio</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-
-      <!-- Hamburger Menu for Mobile -->
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
-
-  <!-- ✅ Offset for Fixed Navbar -->
-  <div style="height: 85px;"></div>
-
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="portfolio-hero-space">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Our Portfolio</h1>
-      <p>Discover the companies we proudly partner with and invest in.</p>
-    </div>
+  <!-- Header -->
+  <section class="top-banner">
+    <h1>Portfolio</h1>
   </section>
 
-  <!-- ==================== PORTFOLIO SECTION (KSPL STYLE) ==================== -->
+  <!-- Portfolio Section -->
   <section class="portfolio-section">
-    <div class="portfolio-title">
-      <h1>Portfolio</h1>
-      <div class="underline"></div>
+
+    <div class="portfolio-filter">
+      <ul>
+        <li class="active">ALL</li>
+        <li>LISTED</li>
+        <li>START UPS</li>
+      </ul>
     </div>
 
-    <!-- LISTED COMPANIES -->
-    <h2 class="category-title">Listed Companies</h2>
-
+    <!-- Portfolio Grid -->
     <div class="portfolio-grid">
-      <div class="portfolio-card"><img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL"></div>
-      <div class="portfolio-card"><img src="CREATIVE GRAPHICS - LISTEDLOGO.jpg" alt="Creative Graphics"></div>
-      <div class="portfolio-card"><img src="DTML - LISTEDLOGO.jpg" alt="DTML"></div>
-      <div class="portfolio-card"><img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex"></div>
-      <div class="portfolio-card"><img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana"></div>
-    </div>
 
-    <!-- UNLISTED COMPANIES -->
-    <h2 class="category-title">Unlisted Companies</h2>
+      <!-- BodhiTree -->
+      <a href="https://www.bodhitreemultimedia.com/" target="_blank" class="portfolio-box">
+        <img src="BodhiTree - PORTFOLIOLOGO.png" alt="BodhiTree Multimedia">
+        <p>BodhiTree Multimedia</p>
+      </a>
 
-    <div class="portfolio-grid">
-      <div class="portfolio-card"><img src="Lumins-logo.png" alt="Lumins"></div>
-      <div class="portfolio-card"><img src="Shellz-logo.png" alt="Shellz"></div>
-      <div class="portfolio-card"><img src="FarmPeace-logo.png" alt="FarmPeace"></div>
-      <div class="portfolio-card"><img src="GoIPO-logo.png" alt="GoIPO"></div>
-      <div class="portfolio-card"><img src="Xangars-logo.png" alt="Xangars"></div>
-      <div class="portfolio-card"><img src="Insuretech-logo.png" alt="InsureTech"></div>
+      <!-- Farm Peace -->
+      <a href="https://farmpeace.in/" target="_blank" class="portfolio-box">
+        <img src="FARM PEACE - PORTFOLIOLOGO.png" alt="Farm Peace">
+        <p>Farm Peace</p>
+      </a>
+
+      <!-- Shellz -->
+      <a href="https://www.shellz.in/" target="_blank" class="portfolio-box">
+        <img src="Shellz - PORTFOLIOLOGO.png" alt="Shellz">
+        <p>Shellz</p>
+      </a>
+
+      <!-- Solitario -->
+      <a href="https://thesolitario.com/" target="_blank" class="portfolio-box">
+        <img src="SOLITARIO - PORTFOLIOLOGO.png" alt="Solitario">
+        <p>Solitario</p>
+      </a>
+
+      <!-- Xangam -->
+      <a href="https://xangarsinfra.com/" target="_blank" class="portfolio-box">
+        <img src="Xangam - PORTFOLIOLOGO.png" alt="Xangam">
+        <p>Xangam Infra</p>
+      </a>
+
+      <!-- Lumins -->
+      <a href="https://www.lumins.in/" target="_blank" class="portfolio-box">
+        <img src="LUMINS- PORTFOLIOLOGO.png" alt="Lumins">
+        <p>Lumins</p>
+      </a>
+
+      <!-- KRI -->
+      <a href="https://worldofkri.com/" target="_blank" class="portfolio-box">
+        <img src="KRI - PORTFOLIOLOGO.png" alt="KRI">
+        <p>KRI</p>
+      </a>
+
+      <!-- ARAPL -->
+      <a href="https://arapl.co.in/" target="_blank" class="portfolio-box">
+        <img src="ARAPL - LISTEDLOGO.jpg" alt="ARAPL">
+        <p>ARAPL</p>
+      </a>
+
+      <!-- Kaytex -->
+      <a href="https://kaytexfabrics.com/" target="_blank" class="portfolio-box">
+        <img src="KAYTEX - LISTEDLOGO.png" alt="Kaytex Fabrics">
+        <p>Kaytex Fabrics</p>
+      </a>
+
+      <!-- Oriana Power -->
+      <a href="https://www.orianapower.com/" target="_blank" class="portfolio-box">
+        <img src="ORIANA - LISTEDLOGO.jpeg" alt="Oriana Power Limited">
+        <p>Oriana Power Limited</p>
+      </a>
+
     </div>
   </section>
-
-  <!-- ==================== FOOTER (Same as Homepage) ==================== -->
-  <footer>
-    <p>© 2025 Rumex Partners. All Rights Reserved.</p>
-  </footer>
-
-  <!-- ==================== SCRIPT ==================== -->
-  <script>
-    // Hamburger menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('active');
-    });
-
-    // Close nav when link clicked (mobile fix)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
-      });
-    });
-  </script>
 
 </body>
+
 </html>
