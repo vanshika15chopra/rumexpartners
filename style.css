@@ -812,50 +812,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-/* ==================== PORTFOLIO HERO (KSPL STYLE) ==================== */
-.portfolio-hero-space {
-  height: 55vh;   /* Same as .inner-hero */
-  background-image: url('hero-bg(2).jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.portfolio-hero-space::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(11, 29, 64, 0.65);
-  z-index: 1;
-}
-
-.portfolio-hero-space h1 {
-  position: relative;
-  z-index: 2;
-  color: white;
-  font-size: 2.8rem;
-  font-weight: 600;
-}
-
-
-/* Mobile fix */
-@media (max-width: 768px) {
-  .portfolio-hero-space h1 {
-    font-size: 2rem;
-  }
-  .portfolio-hero-space p {
-    font-size: 0.95rem;
-  }
-}
-/* ================================
 /* Portfolio Page Hero */
 .portfolio-hero {
   background-image: url('hero-bg(2).jpg');
@@ -880,4 +837,3 @@ footer {
   color: #fff;
   text-align: center;
 }
-
