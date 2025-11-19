@@ -864,3 +864,8 @@ footer {
   color: #caa35f !important;  /* gold hover color */
 }
 
+header {
+  background: #ffffff !important;
+  backdrop-filter: none !important;  /* optional: removes blur */
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05); /* optional softer shadow */
+}
