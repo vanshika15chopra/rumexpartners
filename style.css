@@ -875,3 +875,7 @@ header {
 header {
   background: #ffffff !important;
 }
+/* FIX — make hamburger visible on white navbar */
+.hamburger span {
+    background-color: #0b1d40 !important;  /* dark navy */
+}
