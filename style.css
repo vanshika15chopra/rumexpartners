@@ -893,3 +893,19 @@ header {
     color: #caa35f !important;   /* gold hover color */
   }
 }
+/* FIX MOBILE MENU TEXT COLOR */
+@media (max-width: 768px) {
+  .nav-links {
+    background-color: rgba(11, 29, 64, 0.98) !important;
+  }
+
+  .nav-links a {
+    color: #ffffff !important;     /* force white text */
+    opacity: 1 !important;         /* remove transparency */
+    visibility: visible !important;
+  }
+
+  .nav-links a:hover {
+    color: #caa35f !important;     /* gold hover */
+  }
+}
