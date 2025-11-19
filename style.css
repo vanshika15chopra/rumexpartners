@@ -879,3 +879,17 @@ header {
 .hamburger span {
     background-color: #0b1d40 !important;  /* dark navy */
 }
+/* FIX MOBILE MENU TEXT COLOR */
+@media (max-width: 768px) {
+  .nav-links {
+    background-color: rgba(11, 29, 64, 0.98);
+  }
+
+  .nav-links a {
+    color: #ffffff !important;   /* white text so it is visible */
+  }
+
+  .nav-links a:hover {
+    color: #caa35f !important;   /* gold hover color */
+  }
+}
