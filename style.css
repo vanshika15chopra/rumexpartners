@@ -869,3 +869,9 @@ header {
   backdrop-filter: none !important;  /* optional: removes blur */
   box-shadow: 0 2px 12px rgba(0,0,0,0.05); /* optional softer shadow */
 }
+.navbar {
+  background: #ffffff !important;
+}
+header {
+  background: #ffffff !important;
+}
