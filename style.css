@@ -850,3 +850,16 @@ footer {
 .portfolio-hero {
   padding-top: 140px !important;  /* pushes text downward */
 }
+/* ===== Override Navbar Background to White ===== */
+.navbar {
+  background: #ffffff !important;  /* white background */
+}
+
+/* Change link (menu) colors, since white background needs dark text */
+.navbar .nav-links a {
+  color: #0b1d40 !important;  /* dark navy color for menu text */
+}
+
+.navbar .nav-links a:hover {
+  color: #caa35f !important;  /* gold hover color */
+}
