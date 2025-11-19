@@ -863,3 +863,6 @@ footer {
 .navbar .nav-links a:hover {
   color: #caa35f !important;  /* gold hover color */
 }
+.header {
+    background-color: #ffffff !important;
+}
