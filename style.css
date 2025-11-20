@@ -971,33 +971,3 @@ header {
         background: rgba(255,255,255,0.1);
     }
 }
-/* Remove blue highlight when clicking icons or menu */
-a, button, .mobile-menu-icon {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent !important;
-}
-
-/* Keep menu always visible on larger screens */
-.nav-links {
-  display: flex !important;
-}
-
-/* Disable mobile-menu dropdown behavior so it stays visible */
-.mobile-menu {
-  display: none !important;
-}
-
-/* Always show full menu (like desktop) */
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex !important;
-  }
-  .mobile-menu-icon {
-    display: none !important;
-  }
-}
-
-/* Clean navbar background */
-nav {
-  background: white !important;
-}
