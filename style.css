@@ -1116,4 +1116,42 @@ header,
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
 }
 
+/* ============================
+   DESKTOP NAVBAR FIX
+   ============================ */
+@media (min-width: 769px) {
+
+  /* Fix header height & alignment */
+  header, .navbar {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;   /* Even spacing left & right */
+    background: #ffffff;
+  }
+
+  /* Make nav links align properly in a row */
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 35px;
+    position: static !important;
+    height: auto !important;
+    background: transparent !important;
+    align-items: center;
+  }
+
+  /* Desktop link color */
+  .nav-links a {
+    color: #0b1d40 !important;   /* Navy */
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  /* Hide hamburger on desktop */
+  .hamburger {
+    display: none !important;
+  }
+}
 
