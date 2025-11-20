@@ -1077,3 +1077,41 @@ header {
   backdrop-filter: none !important;
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
+/* Make navbar always white */
+header,
+.navbar {
+  background: #ffffff !important;
+}
+
+/* Make nav links dark navy blue */
+.nav-links a {
+  color: #0b1d40 !important;
+}
+
+/* For mobile — remove blue background */
+.nav-links {
+  background: #ffffff !important;
+}
+
+/* Show menu items clearly on mobile */
+.nav-links li a {
+  color: #0b1d40 !important;
+  display: block;
+  padding: 15px 20px;
+}
+
+/* Keep mobile menu visible when opened */
+.nav-links.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Remove weird overlay / blue page */
+.nav-links {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 70%;
+  border-left: 1px solid #eee;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
+}
