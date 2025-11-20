@@ -937,3 +937,37 @@ header {
     display: flex;
     align-items: center;
 }
+/* ============================
+   SMALL MOBILE DROPDOWN MENU
+   ============================ */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 65px; /* directly under navbar */
+        right: 0;
+        width: 100%;
+        background-color: #0b1d40;
+        display: none; /* hidden by default */
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex; /* only show when hamburger is clicked */
+    }
+
+    .nav-links a {
+        color: #fff;
+        font-size: 1rem;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255,255,255,0.1);
+    }
+}
