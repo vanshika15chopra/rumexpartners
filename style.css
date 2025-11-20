@@ -918,3 +918,22 @@ header {
     color: #caa35f !important;             /* gold hover */
   }
 }
+/* =======================
+   PERFECT KSPL-STYLE LOGO
+   ======================= */
+
+.logo img {
+    height: 70px !important;     /* Bigger, more visible */
+    width: auto;
+    padding: 6px 0;              /* clean spacing like KSPL */
+    object-fit: contain;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.15)); /* makes it pop */
+}
+
+/* Navbar size + alignment */
+.navbar {
+    padding: 12px 35px !important;
+    height: 90px !important;
+    display: flex;
+    align-items: center;
+}
