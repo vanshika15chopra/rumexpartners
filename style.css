@@ -971,3 +971,53 @@ header {
         background: rgba(255,255,255,0.1);
     }
 }
+/* ============================
+   MOBILE NAV – SMALL DROPDOWN
+   ============================ */
+
+@media (max-width: 768px) {
+
+    /* Hide the menu by default */
+    .nav-links {
+        position: absolute;
+        top: 70px;              /* place directly under navbar */
+        right: 0;
+        width: 100%;
+        background: #0b1d40;    /* navy color */
+        display: none;
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 12px;
+        z-index: 999;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* When hamburger is active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Each menu item */
+    .nav-links li a {
+        color: #ffffff;
+        padding: 12px 20px;
+        display: block;
+        font-size: 15px;
+        text-align: left;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-links li a:hover {
+        background: rgba(255,255,255,0.12);
+    }
+
+    /* hamburger stays on top */
+    .hamburger {
+        z-index: 1000;
+    }
+
+    /* remove desktop layout spacing issues */
+    nav.navbar {
+        position: relative;
+    }
+}
