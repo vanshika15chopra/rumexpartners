@@ -1022,3 +1022,73 @@ header {
     z-index: 0 !important;
   }
 }
+/* ============================
+   FINAL MOBILE MENU FIX
+   ============================ */
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 99999;
+  }
+
+  .hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+  }
+
+  /* Hide the nav by default */
+  .nav-links {
+    position: absolute;
+    top: 90px; /* below navbar */
+    right: 0;
+    width: 100%;
+    background: #0b1d40; /* navy */
+    display: none;
+    flex-direction: column;
+    padding: 15px 0;
+    gap: 10px;
+    z-index: 9999;
+
+    /* remove unwanted effects */
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: auto !important;
+  }
+
+  /* When menu opens */
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-align: left;
+    color: #ffffff !important;
+  }
+
+  .nav-links li a:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* Fix hero overlap issue */
+  .hero,
+  .hero-slide,
+  .hero-overlay {
+    z-index: 0 !important;
+  }
+
+}
