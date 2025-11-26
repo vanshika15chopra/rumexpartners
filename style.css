@@ -1175,3 +1175,20 @@ header,
   text-align: center;  /* center the text itself */
 }
 
+/* Make logo bigger */
+.logo img {
+    height: 110px !important;
+    width: auto;
+    padding: 10px 0;
+}
+
+/* Increase navbar height so logo fits */
+.navbar {
+    height: 130px !important;
+    padding: 0 50px;
+}
+
+/* Push the hamburger menu down so it aligns with logo */
+.menu-toggle {
+    top: 45px !important;
+}
